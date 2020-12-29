@@ -1,5 +1,4 @@
 import './App.css';
-import LandingPage from '../LandingPage/LandingPage'
 import styled from 'styled-components'
 
 const StyledApp = styled.div`
