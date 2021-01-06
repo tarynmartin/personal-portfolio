@@ -5,28 +5,28 @@ function App() {
   return (
     <StyledApp>
       <AboutButton>
-        <AboutLogo />
+        <AboutLogo className="icon" />
       </AboutButton>
       <ExperienceButton>
-        <ExpLogo />
+        <ExpLogo className="icon" />
       </ExperienceButton>
       <EducationButton>
-        <EduLogo />
+        <EduLogo className="icon" />
       </EducationButton>
       <HobbiesButton>
-        <HobbyLogo />
+        <HobbyLogo className="icon" />
       </HobbiesButton>
       <LinkedinButton>
-        <LinkedinLogo />
+        <LinkedinLogo className="icon" />
       </LinkedinButton>
       <GithubButton>
-        <GithubLogo />
+        <GithubLogo className="icon" />
       </GithubButton>
       <ProjectsButton>
-        <ProjectLogo />
+        <ProjectLogo className="icon" />
       </ProjectsButton>
       <ContactButton>
-        <ContactLogo />
+        <ContactLogo className="icon" />
       </ContactButton>
       <JobInfo>
         <StyledName>Taryn Martin</StyledName>

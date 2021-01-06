@@ -20,10 +20,19 @@ export const StyledApp = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: none;
   border: none;
   border-radius: 50%;
   width: 30%;
+  box-shadow: 0px 5px 6px #027171, inset 0px 2px 3px #007676;
+  margin: 0.8em;
+
+  &:hover {
+    background-color: #f2827f;
+  }
+
+  &:hover .icon {
+    color: white;
+  }
 `;
 
 export const AboutButton = styled(Button)`
@@ -35,7 +44,7 @@ export const AboutButton = styled(Button)`
 export const AboutLogo = styled(AboutDotMe)`
   color: teal;
   height: 6em;
-`
+`;
 
 export const ProjectsButton = styled(Button)`
   grid-row: 1;
