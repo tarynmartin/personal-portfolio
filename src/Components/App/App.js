@@ -21,30 +21,28 @@ function App() {
           <HobbiesButton>
             <HobbyLogo className="icon" />
           </HobbiesButton>
-          <Link
-            to={"https://www.linkedin.com/in/tarynmartin919/"}
-            target="_blank"
-            onClick={(event) => {
-              event.preventDefault();
-              window.open("https://www.linkedin.com/in/tarynmartin919/");
-            }}
-          >
-            <LinkedinButton>
-              <LinkedinLogo className="icon" />
-            </LinkedinButton>
-          </Link>
-          <Link
-            to={"https://github.com/tarynmartin"}
-            target="_blank"
-            onClick={(event) => {
-              event.preventDefault();
-              window.open("https://github.com/tarynmartin");
-            }}
-          >
-            <GithubButton>
-              <GithubLogo className="icon" />
-            </GithubButton>
-          </Link>
+          <LinkedinButton>
+            <Link
+              to={"https://www.linkedin.com/in/tarynmartin919/"}
+              target="_blank"
+              onClick={(event) => {
+                event.preventDefault();
+                window.open("https://www.linkedin.com/in/tarynmartin919/");
+              }}>
+                <LinkedinLogo className="icon" />
+            </Link>
+          </LinkedinButton>
+          <GithubButton>
+            <Link
+              to={"https://github.com/tarynmartin"}
+              target="_blank"
+              onClick={(event) => {
+                event.preventDefault();
+                window.open("https://github.com/tarynmartin");
+              }}>
+                <GithubLogo className="icon" />
+              </Link>
+          </GithubButton>
           <ProjectsButton>
             <ProjectLogo className="icon" />
           </ProjectsButton>

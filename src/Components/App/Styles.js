@@ -19,6 +19,7 @@ export const StyledApp = styled.div`
   grid-template-rows: repeat(5, 1fr);
 `;
 
+
 export const Button = styled.button`
   border: none;
   border-radius: 50%;
