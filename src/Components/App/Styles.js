@@ -19,11 +19,12 @@ export const StyledApp = styled.div`
   grid-template-rows: repeat(5, 1fr);
 `;
 
+
 export const Button = styled.button`
   border: none;
   border-radius: 50%;
   width: 30%;
-  box-shadow: 0px 5px 6px #027171, inset 0px 2px 3px #007676;
+  box-shadow: 10px 10px 10px #027171;
   margin: 0.8em;
 
   &:hover {
@@ -38,7 +39,7 @@ export const Button = styled.button`
 export const AboutButton = styled(Button)`
   grid-row: 3;
   grid-column: 1;
-  margin-left: 30%;
+  margin-left: 35%;
 `;
 
 export const AboutLogo = styled(AboutDotMe)`
@@ -58,9 +59,10 @@ export const ProjectLogo = styled(LaptopCode)`
 `;
 
 export const EducationButton = styled(Button)`
-  grid-row: 2;
+  grid-row: 1 / span 2;
   grid-column: 1;
-  margin-left: 60%
+  margin: 6.5em;
+  margin-left: 65%
 `;
 
 export const EduLogo = styled(GraduationCap)`
@@ -69,9 +71,10 @@ export const EduLogo = styled(GraduationCap)`
 `;
 
 export const ExperienceButton = styled(Button)`
-  grid-row: 2;
+  grid-row: 1 / span 2;
   grid-column: 3;
-  margin-left: 10%;
+  margin: 6.5em;
+  margin-left: 5%;
 `;
 
 export const ExpLogo = styled(Briefcase)`
@@ -102,9 +105,10 @@ export const ContactLogo = styled(MessageRounded)`
 `;
 
 export const LinkedinButton = styled(Button)`
-  grid-row: 4;
+  grid-row: 4 / span 2;
   grid-column: 1;
-  margin-left: 60%;
+  margin: 6.5em;
+  margin-left: 65%;
 `;
 
 export const LinkedinLogo = styled(Linkedin)`
@@ -113,9 +117,10 @@ export const LinkedinLogo = styled(Linkedin)`
 `;
 
 export const GithubButton = styled(Button)`
-  grid-row: 4;
+  grid-row: 4 / span 2;
   grid-column: 3;
-  margin-left: 10%;
+  margin: 6.5em;
+  margin-left: 5%;
 `;
 
 export const GithubLogo = styled(Github)`
