@@ -1,6 +1,7 @@
 import './App.css';
 import { Router, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
+import Main from '../Main/Main.js';
 import LandingPage from '../LandingPage/LandingPage.js';
 import About from '../About/About.js';
 import Contact from '../Contact/Contact.js';
@@ -15,6 +16,9 @@ function App() {
   return (
     <StyledApp>
       <Router history={history}>
+        <Route path="/main">
+          <Main />
+        </Route>
         <Route path="/about">
           <About />
         </Route>
