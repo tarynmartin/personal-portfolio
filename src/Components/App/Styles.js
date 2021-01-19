@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import img from '../../assets/tim-mossholder-G-IId4_X6mA-unsplash.jpg';
+import { Link } from 'react-router-dom';
 import { Github } from "@styled-icons/fa-brands/Github";
 import { Linkedin } from "@styled-icons/fa-brands/Linkedin";
 import { AboutDotMe } from "@styled-icons/simple-icons/AboutDotMe"; 
@@ -9,7 +11,8 @@ import { Hiking } from "@styled-icons/fa-solid/Hiking";
 import { MessageRounded } from "@styled-icons/boxicons-solid/MessageRounded";
 
 export const StyledApp = styled.div`
-  background-color: teal;
+  background-image: url(${img});
+  background-size: cover;
   color: white;
   margin: 0;
   padding: 0;
@@ -19,46 +22,65 @@ export const StyledApp = styled.div`
   grid-template-rows: repeat(5, 1fr);
 `;
 
+export const StyledMain = styled.div`
+  background-color: black;
+  color: white;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+`;
+
 
 export const Button = styled.button`
   border: none;
-  border-radius: 50%;
-  width: 30%;
-  box-shadow: 10px 10px 10px #027171;
   margin: 0.8em;
-
-  &:hover {
-    background-color: #f2827f;
-  }
+  background-color: transparent;
+  text-align: center;
 
   &:hover .icon {
-    color: white;
+    color: orange;
+    cursor: pointer;
   }
 `;
 
-export const AboutButton = styled(Button)`
+export const StyledLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items; center;
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
+
+export const AboutLink = styled(StyledLink)`
   grid-row: 3;
   grid-column: 1;
-  margin-left: 35%;
 `;
 
 export const AboutLogo = styled(AboutDotMe)`
-  color: teal;
+  color: white;
   height: 6em;
 `;
 
-export const ProjectsButton = styled(Button)`
+export const ProjectsLink = styled(StyledLink)`
   grid-row: 1;
   grid-column: 2;
   margin-left: 35%;
 `;
 
 export const ProjectLogo = styled(LaptopCode)`
-  color: teal;
+  color: white;
   height: 6em;
 `;
 
-export const EducationButton = styled(Button)`
+export const EducationLink = styled(StyledLink)`
   grid-row: 1 / span 2;
   grid-column: 1;
   margin: 6.5em;
@@ -66,11 +88,11 @@ export const EducationButton = styled(Button)`
 `;
 
 export const EduLogo = styled(GraduationCap)`
-  color: teal;
+  color: white;
   height: 6em;
 `;
 
-export const ExperienceButton = styled(Button)`
+export const ExperienceLink = styled(StyledLink)`
   grid-row: 1 / span 2;
   grid-column: 3;
   margin: 6.5em;
@@ -78,33 +100,33 @@ export const ExperienceButton = styled(Button)`
 `;
 
 export const ExpLogo = styled(Briefcase)`
-  color: teal;
+  color: white;
   height: 6em;
 `;
 
-export const HobbiesButton = styled(Button)`
+export const HobbiesLink = styled(StyledLink)`
   grid-row: 3;
   grid-column: 3;
   margin-left: 30%;
 `;
 
 export const HobbyLogo = styled(Hiking)`
-  color: teal;
+  color: white;
   height: 6em;
 `;
 
-export const ContactButton = styled(Button)`
+export const ContactLink = styled(StyledLink)`
   grid-row: 5;
   grid-column: 2;
   margin-left: 35%;
 `;
 
 export const ContactLogo = styled(MessageRounded)`
-  color: teal;
+  color: white;
   height: 6em;
 `;
 
-export const LinkedinButton = styled(Button)`
+export const LinkedinLink = styled(StyledLink)`
   grid-row: 4 / span 2;
   grid-column: 1;
   margin: 6.5em;
@@ -112,11 +134,11 @@ export const LinkedinButton = styled(Button)`
 `;
 
 export const LinkedinLogo = styled(Linkedin)`
-  color: teal;
+  color: white;
   height: 6em;
 `;
 
-export const GithubButton = styled(Button)`
+export const GithubLink = styled(StyledLink)`
   grid-row: 4 / span 2;
   grid-column: 3;
   margin: 6.5em;
@@ -124,22 +146,37 @@ export const GithubButton = styled(Button)`
 `;
 
 export const GithubLogo = styled(Github)`
-  color: teal;
+  color: white;
   height: 6em;
 `;
 
-export const JobInfo = styled.div`
+export const StyledHeadshot = styled.img`
+  border-radius: 50%;
+  width: 200px;
+  height: 250px;
+`
+
+export const StyledLandingLink = styled(StyledLink)`
   grid-row: 3;
   grid-column: 2;
-  text-align: center;
 `;
 
-export const StyledName = styled.h1`
-  color: white;
-  font-size: 2em;
-`;
+export const StyledTitle = styled.div`
+  & .name {
+    color: white;
+    font-size: 4em;
+  }
 
-export const StyledJobTitle = styled.h2`
-  color: white;
-  font-size: 1em;
+  & .title {
+    color: white;
+    font-size: 2em;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .name, &:hover .title {
+    color: orange;
+  }
 `;
