@@ -6,22 +6,30 @@ function Main() {
     <StyledMain>
       <AboutLink to="/about">
         <Button>
-          <AboutLogo className="icon" />
+          <span>
+            <AboutLogo className="icon"></AboutLogo>
+          </span>
         </Button>
       </AboutLink>
       <ExperienceLink to="/experience">
         <Button>
-          <ExpLogo className="icon" />
+          <span>
+            <ExpLogo className="icon" />
+          </span>
         </Button>
       </ExperienceLink>
       <EducationLink to="/education">
         <Button>
-          <EduLogo className="icon" />
+          <span>
+            <EduLogo className="icon" />
+          </span>
         </Button>
       </EducationLink>
       <HobbiesLink to="/hobbies">
         <Button>
-          <HobbyLogo className="icon" />
+          <span>
+            <HobbyLogo className="icon" />
+          </span>
         </Button>
       </HobbiesLink>
       <LinkedinLink
@@ -33,7 +41,9 @@ function Main() {
         }}
       >
         <Button>
-          <LinkedinLogo className="icon" />
+          <span>
+            <LinkedinLogo className="icon" />
+          </span>
         </Button>
       </LinkedinLink>
       <GithubLink
@@ -45,17 +55,23 @@ function Main() {
         }}
       >
         <Button>
-          <GithubLogo className="icon" />
+          <span>
+            <GithubLogo className="icon" />
+          </span>
         </Button>
       </GithubLink>
-      <ProjectsLink to='/projects'>
+      <ProjectsLink to="/projects">
         <Button>
-          <ProjectLogo className="icon" />
+          <span>
+            <ProjectLogo className="icon" />
+          </span>
         </Button>
       </ProjectsLink>
-      <ContactLink to='/contact'>
+      <ContactLink to="/contact">
         <Button>
-          <ContactLogo className="icon" />
+          <span>
+            <ContactLogo className="icon" />
+          </span>
         </Button>
       </ContactLink>
     </StyledMain>
