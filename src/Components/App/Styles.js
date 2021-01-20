@@ -23,12 +23,13 @@ export const StyledApp = styled.div`
 `;
 
 export const StyledMain = styled.div`
-  background-color: black;
+  background-image: radial-gradient(circle, #008a8c, #003738);
   color: white;
   width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 `;
 
 
@@ -36,12 +37,6 @@ export const Button = styled.button`
   border: none;
   margin: 0.8em;
   background-color: transparent;
-  text-align: center;
-
-  &:hover .icon {
-    color: orange;
-    cursor: pointer;
-  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -57,11 +52,36 @@ export const StyledLink = styled(Link)`
   &:active {
     text-decoration: none;
   }
+
+  &:hover button span .icon {
+    display: none;
+  }
+
+  &:hover button span:after{
+    cursor: pointer;
+    background-color: white;
+    color: orange;
+    font-size: 3em;
+    font-weight: bolder;
+    width: 30vw;
+    height: 15vh;
+    padding: 0.5em;
+    border-radius: 10px;
+    text-align: center;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
 `;
 
 export const AboutLink = styled(StyledLink)`
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 1;
+
+  &:hover button span:after{
+    content: 'About Me';
+  }
 `;
 
 export const AboutLogo = styled(AboutDotMe)`
@@ -72,7 +92,10 @@ export const AboutLogo = styled(AboutDotMe)`
 export const ProjectsLink = styled(StyledLink)`
   grid-row: 1;
   grid-column: 2;
-  margin-left: 35%;
+
+  &:hover button span:after {
+    content: "Projects";
+  }
 `;
 
 export const ProjectLogo = styled(LaptopCode)`
@@ -81,10 +104,12 @@ export const ProjectLogo = styled(LaptopCode)`
 `;
 
 export const EducationLink = styled(StyledLink)`
-  grid-row: 1 / span 2;
+  grid-row: 1;
   grid-column: 1;
-  margin: 6.5em;
-  margin-left: 65%
+
+  &:hover button span:after {
+    content: "Education";
+  }
 `;
 
 export const EduLogo = styled(GraduationCap)`
@@ -93,10 +118,12 @@ export const EduLogo = styled(GraduationCap)`
 `;
 
 export const ExperienceLink = styled(StyledLink)`
-  grid-row: 1 / span 2;
+  grid-row: 1;
   grid-column: 3;
-  margin: 6.5em;
-  margin-left: 5%;
+
+  &:hover button span:after {
+    content: "Experience";
+  }
 `;
 
 export const ExpLogo = styled(Briefcase)`
@@ -105,9 +132,12 @@ export const ExpLogo = styled(Briefcase)`
 `;
 
 export const HobbiesLink = styled(StyledLink)`
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 3;
-  margin-left: 30%;
+
+  &:hover button span:after {
+    content: "Hobbies";
+  }
 `;
 
 export const HobbyLogo = styled(Hiking)`
@@ -116,9 +146,12 @@ export const HobbyLogo = styled(Hiking)`
 `;
 
 export const ContactLink = styled(StyledLink)`
-  grid-row: 5;
+  grid-row: 3;
   grid-column: 2;
-  margin-left: 35%;
+
+  &:hover button span:after {
+    content: "Contact Me";
+  }
 `;
 
 export const ContactLogo = styled(MessageRounded)`
@@ -127,10 +160,12 @@ export const ContactLogo = styled(MessageRounded)`
 `;
 
 export const LinkedinLink = styled(StyledLink)`
-  grid-row: 4 / span 2;
+  grid-row: 3;
   grid-column: 1;
-  margin: 6.5em;
-  margin-left: 65%;
+
+  &:hover button span:after {
+    content: "LinkedIn Profile";
+  }
 `;
 
 export const LinkedinLogo = styled(Linkedin)`
@@ -139,10 +174,12 @@ export const LinkedinLogo = styled(Linkedin)`
 `;
 
 export const GithubLink = styled(StyledLink)`
-  grid-row: 4 / span 2;
+  grid-row: 3;
   grid-column: 3;
-  margin: 6.5em;
-  margin-left: 5%;
+
+  &:hover button span:after {
+    content: "Github Profile";
+  }
 `;
 
 export const GithubLogo = styled(Github)`
