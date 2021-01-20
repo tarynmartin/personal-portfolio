@@ -1,4 +1,3 @@
-import './App.css';
 import { Router, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Main from '../Main/Main.js';
