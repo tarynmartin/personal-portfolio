@@ -20,6 +20,7 @@ export const StyledApp = styled.div`
 `;
 
 export const StyledMain = styled.div`
+  font-family: "Vollkorn", serif;
   background-image: radial-gradient(circle, #008a8c, #003738);
   color: white;
   width: 100vw;
@@ -58,8 +59,8 @@ export const StyledLink = styled(Link)`
     cursor: pointer;
     background-color: white;
     color: #953800;
+    font-family: "Rakkas", cursive;
     font-size: 3em;
-    font-weight: bolder;
     width: 30vw;
     height: 15vh;
     padding: 0.5em;
@@ -184,10 +185,19 @@ export const GithubLogo = styled(Github)`
   height: 6em;
 `;
 
+export const StyledImgDiv = styled.div`
+  grid-row: 2;
+  grid-column: 2;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const StyledHeadshot = styled.img`
   border-radius: 50%;
   width: 200px;
-  height: 250px;
+  height: 200px;
+  margin: 4em 0;
 `
 
 export const StyledLandingLink = styled(StyledLink)`

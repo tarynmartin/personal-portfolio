@@ -17,6 +17,3 @@ function LandingPage() {
 }
 
 export default LandingPage;
-
-// use on about page?
-//<StyledHeadshot src={headshot} alt="headshot of Taryn Martin"></StyledHeadshot>;
