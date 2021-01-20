@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyledMain, Button, AboutLink, AboutLogo, ProjectsLink, ProjectLogo, EducationLink, EduLogo, ExperienceLink, ExpLogo, HobbiesLink, HobbyLogo, ContactLink, ContactLogo, LinkedinLink, LinkedinLogo, GithubLink, GithubLogo } from '../App/Styles.js';
+import headshot from '../../assets/taryn-headshot.jpg';
+import {StyledMain, Button, AboutLink, AboutLogo, ProjectsLink, ProjectLogo, EducationLink, EduLogo, ExperienceLink, ExpLogo, HobbiesLink, HobbyLogo, ContactLink, ContactLogo, LinkedinLink, LinkedinLogo, GithubLink, GithubLogo, StyledHeadshot, StyledImgDiv } from '../App/Styles.js';
 
 function Main() {
   return (
@@ -74,6 +75,12 @@ function Main() {
           </span>
         </Button>
       </ContactLink>
+      <StyledImgDiv>
+        <StyledHeadshot
+          src={headshot}
+          alt="headshot of Taryn Martin"
+        ></StyledHeadshot>
+      </StyledImgDiv>
     </StyledMain>
   );
 }
