@@ -17,9 +17,6 @@ export const StyledApp = styled.div`
   margin: 0;
   padding: 0;
   height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
 `;
 
 export const StyledMain = styled.div`
@@ -60,7 +57,7 @@ export const StyledLink = styled(Link)`
   &:hover button span:after{
     cursor: pointer;
     background-color: white;
-    color: orange;
+    color: #953800;
     font-size: 3em;
     font-weight: bolder;
     width: 30vw;
@@ -199,21 +196,30 @@ export const StyledLandingLink = styled(StyledLink)`
 `;
 
 export const StyledTitle = styled.div`
+  font-family: "Rakkas", cursive;
+  letter-spacing: 0.2em;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  box-sizing: border-box;
+
   & .name {
     color: white;
-    font-size: 4em;
+    font-size: 6em;
+    grid-row: 2;
   }
 
   & .title {
     color: white;
-    font-size: 2em;
+    font-size: 4em;
+    grid-row: 3;
   }
 
   &:hover {
     cursor: pointer;
   }
 
-  &:hover .name, &:hover .title {
-    color: orange;
+  &:hover .name,
+  &:hover .title {
+    color: #16d5d9;
   }
 `;
