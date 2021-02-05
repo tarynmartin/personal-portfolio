@@ -1,17 +1,10 @@
 import React from 'react';
 import headshot from '../../assets/taryn-headshot.jpg';
-import {StyledMain, Button, AboutLink, AboutLogo, ProjectsLink, ProjectLogo, EducationLink, EduLogo, ExperienceLink, ExpLogo, HobbiesLink, HobbyLogo, ContactLink, ContactLogo, LinkedinLink, LinkedinLogo, GithubLink, GithubLogo, StyledHeadshot, StyledImgDiv } from '../App/Styles.js';
+import {StyledMain, Button, AboutLink, ProjectsLink, ProjectLogo, EducationLink, EduLogo, ExperienceLink, ExpLogo, ContactLink, ContactLogo, LinkedinLink, LinkedinLogo, GithubLink, GithubLogo, StyledHeadshot, StyledImgDiv } from '../App/Styles.js';
 
 function Main() {
   return (
     <StyledMain>
-      <AboutLink to="/about">
-        <Button>
-          <span>
-            <AboutLogo className="icon"></AboutLogo>
-          </span>
-        </Button>
-      </AboutLink>
       <ExperienceLink to="/experience">
         <Button>
           <span>
@@ -26,13 +19,6 @@ function Main() {
           </span>
         </Button>
       </EducationLink>
-      <HobbiesLink to="/hobbies">
-        <Button>
-          <span>
-            <HobbyLogo className="icon" />
-          </span>
-        </Button>
-      </HobbiesLink>
       <LinkedinLink
         to={"https://www.linkedin.com/in/tarynmartin919/"}
         target="_blank"
@@ -75,12 +61,14 @@ function Main() {
           </span>
         </Button>
       </ContactLink>
-      <StyledImgDiv>
-        <StyledHeadshot
-          src={headshot}
-          alt="headshot of Taryn Martin"
-        ></StyledHeadshot>
-      </StyledImgDiv>
+      <AboutLink to="/about">
+        <StyledImgDiv>
+          <StyledHeadshot
+            src={headshot}
+            alt="headshot of Taryn Martin"
+          ></StyledHeadshot>
+        </StyledImgDiv>
+      </AboutLink>
     </StyledMain>
   );
 }

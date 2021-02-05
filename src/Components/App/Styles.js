@@ -7,7 +7,6 @@ import { AboutDotMe } from "@styled-icons/simple-icons/AboutDotMe";
 import { LaptopCode } from "@styled-icons/fa-solid/LaptopCode";
 import { GraduationCap } from "@styled-icons/fa-solid/GraduationCap";
 import { Briefcase } from "@styled-icons/fa-solid/Briefcase";
-import { Hiking } from "@styled-icons/fa-solid/Hiking";
 import { MessageRounded } from "@styled-icons/boxicons-solid/MessageRounded";
 
 export const StyledApp = styled.div`
@@ -75,7 +74,7 @@ export const StyledLink = styled(Link)`
 
 export const AboutLink = styled(StyledLink)`
   grid-row: 2;
-  grid-column: 1;
+  grid-column: 2;
 
   &:hover button span:after{
     content: 'About Me';
@@ -129,20 +128,6 @@ export const ExpLogo = styled(Briefcase)`
   height: 6em;
 `;
 
-export const HobbiesLink = styled(StyledLink)`
-  grid-row: 2;
-  grid-column: 3;
-
-  &:hover button span:after {
-    content: "Hobbies";
-  }
-`;
-
-export const HobbyLogo = styled(Hiking)`
-  color: white;
-  height: 6em;
-`;
-
 export const ContactLink = styled(StyledLink)`
   grid-row: 3;
   grid-column: 2;
@@ -186,8 +171,6 @@ export const GithubLogo = styled(Github)`
 `;
 
 export const StyledImgDiv = styled.div`
-  grid-row: 2;
-  grid-column: 2;
   display: grid;
   justify-content: center;
   align-items: center;
