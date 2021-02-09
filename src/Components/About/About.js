@@ -1,11 +1,16 @@
 import React from 'react'
+import {
+  StyledContentParagraph,
+  StyledBackground,
+} from "./styles.js"
 
 function About() {
   return (
-    <>
-    <h1>About Me</h1>
-    <p>Blahhhhhhhhhhh</p>
-    </>
+      <StyledBackground>
+        <StyledContentParagraph>
+          Blahhhhhhhh
+        </StyledContentParagraph>
+      </StyledBackground>
   )
 }
 

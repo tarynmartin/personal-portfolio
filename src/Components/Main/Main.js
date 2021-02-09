@@ -1,74 +1,66 @@
-import React from 'react';
-import headshot from '../../assets/taryn-headshot.jpg';
-import {StyledMain, Button, AboutLink, ProjectsLink, ProjectLogo, EducationLink, EduLogo, ExperienceLink, ExpLogo, ContactLink, ContactLogo, LinkedinLink, LinkedinLogo, GithubLink, GithubLogo, StyledHeadshot, StyledImgDiv } from '../App/Styles.js';
+import React, {useState} from 'react';
+//import headshot from '../../assets/taryn-headshot.jpg';
+import About from '../About/About.js';
+import {StyledMain, Button, StyledLinks, StyledMainContent, AboutButton, AboutLogo, ProjectsButton, ProjectLogo, ContactButton, ContactLogo, LinkedinLink, LinkedinLogo, GithubLink, GithubLogo } from '../App/Styles.js';
 
 function Main() {
+  const [button, setButton] = useState('');
+
   return (
     <StyledMain>
-      <ExperienceLink to="/experience">
-        <Button>
-          <span>
-            <ExpLogo className="icon" />
-          </span>
-        </Button>
-      </ExperienceLink>
-      <EducationLink to="/education">
-        <Button>
-          <span>
-            <EduLogo className="icon" />
-          </span>
-        </Button>
-      </EducationLink>
-      <LinkedinLink
-        to={"https://www.linkedin.com/in/tarynmartin919/"}
-        target="_blank"
-        onClick={(event) => {
-          event.preventDefault();
-          window.open("https://www.linkedin.com/in/tarynmartin919/");
-        }}
-      >
-        <Button>
-          <span>
-            <LinkedinLogo className="icon" />
-          </span>
-        </Button>
-      </LinkedinLink>
-      <GithubLink
-        to={"https://github.com/tarynmartin"}
-        target="_blank"
-        onClick={(event) => {
-          event.preventDefault();
-          window.open("https://github.com/tarynmartin");
-        }}
-      >
-        <Button>
-          <span>
-            <GithubLogo className="icon" />
-          </span>
-        </Button>
-      </GithubLink>
-      <ProjectsLink to="/projects">
-        <Button>
+        <ProjectsButton onClick={() => setButton('project')}>
           <span>
             <ProjectLogo className="icon" />
           </span>
-        </Button>
-      </ProjectsLink>
-      <ContactLink to="/contact">
-        <Button>
+        </ProjectsButton>
+        <ContactButton onClick={() => setButton('contact')}>
           <span>
             <ContactLogo className="icon" />
           </span>
-        </Button>
-      </ContactLink>
-      <AboutLink to="/about">
-        <StyledImgDiv>
-          <StyledHeadshot
-            src={headshot}
-            alt="headshot of Taryn Martin"
-          ></StyledHeadshot>
-        </StyledImgDiv>
-      </AboutLink>
+        </ContactButton>
+        <AboutButton onClick={() => setButton('about')}>
+          <span>
+            <AboutLogo className="icon" />
+          </span>
+        </AboutButton>
+      <StyledLinks>
+        <LinkedinLink
+          to={"https://www.linkedin.com/in/tarynmartin919/"}
+          target="_blank"
+          onClick={(event) => {
+            event.preventDefault();
+            window.open("https://www.linkedin.com/in/tarynmartin919/");
+          }}
+        >
+          <Button>
+            <span>
+              <LinkedinLogo className="icon" />
+            </span>
+          </Button>
+        </LinkedinLink>
+        <GithubLink
+          to={"https://github.com/tarynmartin"}
+          target="_blank"
+          onClick={(event) => {
+            event.preventDefault();
+            window.open("https://github.com/tarynmartin");
+          }}
+        >
+          <Button>
+            <span>
+              <GithubLogo className="icon" />
+            </span>
+          </Button>
+        </GithubLink>
+      </StyledLinks>
+      <StyledMainContent>
+        {button === '' &&
+          'Please click on a button for more information'
+        }
+        {button === 'about' &&
+          <About />
+        }
+      </StyledMainContent>    
     </StyledMain>
   );
 }

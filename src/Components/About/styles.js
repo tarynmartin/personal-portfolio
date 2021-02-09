@@ -1,22 +1,5 @@
 import styled from "styled-components";
 
-export const StyledContent = styled.div`
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-`
-
-export const StyledTitle = styled.h1`
-  margin: 1em 1em 1em 1.5em;
-  text-align: center;
-  font-family: "Vollkorn", serif;
-  font-size: 4.5em;
-  align-self: center;
-`;
-
 export const StyledContentParagraph = styled.p`
   margin: 0 2em;
   font-family: 'Rakkas', cursive;
@@ -26,7 +9,7 @@ export const StyledContentParagraph = styled.p`
 
 export const StyledBackground = styled.div`
   background-color: white;
-  width: 70%;
+  width: 85%;
   height: 90%;
   box-sizing: border-box;
   margin: 3em;
