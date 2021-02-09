@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledEducation = styled.div`
+export const StyledContent = styled.div`
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ export const StyledTitle = styled.h1`
   align-self: center;
 `;
 
-export const StyledEduParagraph = styled.p`
+export const StyledContentParagraph = styled.p`
   margin: 0 2em;
   font-family: 'Rakkas', cursive;
   font-size: 1.7em;
