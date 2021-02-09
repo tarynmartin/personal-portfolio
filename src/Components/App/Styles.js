@@ -5,8 +5,8 @@ import { Github } from "@styled-icons/fa-brands/Github";
 import { Linkedin } from "@styled-icons/fa-brands/Linkedin";
 import { AboutDotMe } from "@styled-icons/simple-icons/AboutDotMe"; 
 import { LaptopCode } from "@styled-icons/fa-solid/LaptopCode";
-import { GraduationCap } from "@styled-icons/fa-solid/GraduationCap";
-import { Briefcase } from "@styled-icons/fa-solid/Briefcase";
+//import { GraduationCap } from "@styled-icons/fa-solid/GraduationCap";
+//import { Briefcase } from "@styled-icons/fa-solid/Briefcase";
 import { MessageRounded } from "@styled-icons/boxicons-solid/MessageRounded";
 
 export const StyledApp = styled.div`
@@ -26,7 +26,7 @@ export const StyledMain = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 `;
 
 
@@ -72,9 +72,52 @@ export const StyledLink = styled(Link)`
   }
 `;
 
+export const StyledOutsideLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items; center;
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:hover button span .icon {
+    display: none;
+  }
+
+  &:hover button span:after{
+    cursor: pointer;
+    background-color: white;
+    color: #953800;
+    font-family: "Rakkas", cursive;
+    font-size: 1em;
+    width: 15vw;
+    height: 5vh;
+    padding: 0.5em;
+    border-radius: 10px;
+    text-align: center;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+`;
+
+export const StyledLinks = styled.div`
+  grid-row: 4;
+  grid-column: 1;
+  display: grid;
+  grid-template-coloumns: repeat(2, auto);
+`
+
 export const AboutLink = styled(StyledLink)`
-  grid-row: 2;
-  grid-column: 2;
+  grid-row: 1;
+  grid-column: 1;
 
   &:hover button span:after{
     content: 'About Me';
@@ -87,8 +130,8 @@ export const AboutLogo = styled(AboutDotMe)`
 `;
 
 export const ProjectsLink = styled(StyledLink)`
-  grid-row: 1;
-  grid-column: 2;
+  grid-row: 2;
+  grid-column: 1;
 
   &:hover button span:after {
     content: "Projects";
@@ -100,37 +143,9 @@ export const ProjectLogo = styled(LaptopCode)`
   height: 6em;
 `;
 
-export const EducationLink = styled(StyledLink)`
-  grid-row: 1;
-  grid-column: 1;
-
-  &:hover button span:after {
-    content: "Education";
-  }
-`;
-
-export const EduLogo = styled(GraduationCap)`
-  color: white;
-  height: 6em;
-`;
-
-export const ExperienceLink = styled(StyledLink)`
-  grid-row: 1;
-  grid-column: 3;
-
-  &:hover button span:after {
-    content: "Experience";
-  }
-`;
-
-export const ExpLogo = styled(Briefcase)`
-  color: white;
-  height: 6em;
-`;
-
 export const ContactLink = styled(StyledLink)`
   grid-row: 3;
-  grid-column: 2;
+  grid-column: 1;
 
   &:hover button span:after {
     content: "Contact Me";
@@ -142,8 +157,7 @@ export const ContactLogo = styled(MessageRounded)`
   height: 6em;
 `;
 
-export const LinkedinLink = styled(StyledLink)`
-  grid-row: 3;
+export const LinkedinLink = styled(StyledOutsideLink)`
   grid-column: 1;
 
   &:hover button span:after {
@@ -153,12 +167,11 @@ export const LinkedinLink = styled(StyledLink)`
 
 export const LinkedinLogo = styled(Linkedin)`
   color: white;
-  height: 6em;
+  height: 3em;
 `;
 
-export const GithubLink = styled(StyledLink)`
-  grid-row: 3;
-  grid-column: 3;
+export const GithubLink = styled(StyledOutsideLink)`
+  grid-column: 2;
 
   &:hover button span:after {
     content: "Github Profile";
@@ -167,7 +180,7 @@ export const GithubLink = styled(StyledLink)`
 
 export const GithubLogo = styled(Github)`
   color: white;
-  height: 6em;
+  height: 3em;
 `;
 
 export const StyledImgDiv = styled.div`

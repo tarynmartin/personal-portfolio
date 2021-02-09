@@ -1,11 +1,21 @@
 import React from 'react'
+import {
+  StyledContent,
+  StyledTitle,
+  StyledContentParagraph,
+  StyledBackground,
+} from "../Education/styles.js";
 
 function About() {
   return (
-    <>
-    <h1>About Me</h1>
-    <p>Blahhhhhhhhhhh</p>
-    </>
+    <StyledContent>
+      <StyledTitle>About Me</StyledTitle>
+      <StyledBackground>
+        <StyledContentParagraph>
+          
+        </StyledContentParagraph>
+      </StyledBackground>
+    </StyledContent>
   )
 }
 
