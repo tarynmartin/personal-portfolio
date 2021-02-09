@@ -34,6 +34,10 @@ export const Button = styled.button`
   border: none;
   margin: 0.8em;
   background-color: transparent;
+
+  &:hover span .icon {
+    display: none;
+  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -48,27 +52,6 @@ export const StyledLink = styled(Link)`
   &:link,
   &:active {
     text-decoration: none;
-  }
-
-  &:hover button span .icon {
-    display: none;
-  }
-
-  &:hover button span:after{
-    cursor: pointer;
-    background-color: white;
-    color: #953800;
-    font-family: "Rakkas", cursive;
-    font-size: 3em;
-    width: 30vw;
-    height: 15vh;
-    padding: 0.5em;
-    border-radius: 10px;
-    text-align: center;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -ms-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
   }
 `;
 
@@ -115,12 +98,32 @@ export const StyledLinks = styled.div`
   grid-template-coloumns: repeat(2, auto);
 `
 
-export const AboutLink = styled(StyledLink)`
+export const StyledMainContent = styled.section`
+  grid-row: 1 / span 4;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+`
+
+export const AboutButton = styled(Button)`
   grid-row: 1;
   grid-column: 1;
 
-  &:hover button span:after{
-    content: 'About Me';
+  &:hover span:after {
+    content: "About Me";
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #953800;
+    font-family: "Rakkas", cursive;
+    font-size: 2em;
+    width: 16vw;
+    height: 10vh;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 2em;
   }
 `;
 
@@ -129,12 +132,25 @@ export const AboutLogo = styled(AboutDotMe)`
   height: 6em;
 `;
 
-export const ProjectsLink = styled(StyledLink)`
+export const ProjectsButton = styled(Button)`
   grid-row: 2;
   grid-column: 1;
 
-  &:hover button span:after {
+  &:hover span:after {
     content: "Projects";
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #953800;
+    font-family: "Rakkas", cursive;
+    font-size: 2em;
+    width: 16vw;
+    height: 10vh;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1.5em;
   }
 `;
 
@@ -143,12 +159,25 @@ export const ProjectLogo = styled(LaptopCode)`
   height: 6em;
 `;
 
-export const ContactLink = styled(StyledLink)`
+export const ContactButton = styled(Button)`
   grid-row: 3;
   grid-column: 1;
 
-  &:hover button span:after {
+  &:hover span:after {
     content: "Contact Me";
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #953800;
+    font-family: "Rakkas", cursive;
+    font-size: 2em;
+    width: 16vw;
+    height: 10vh;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1.5em;
   }
 `;
 
@@ -183,18 +212,18 @@ export const GithubLogo = styled(Github)`
   height: 3em;
 `;
 
-export const StyledImgDiv = styled.div`
-  display: grid;
-  justify-content: center;
-  align-items: center;
-`;
+// export const StyledImgDiv = styled.div`
+//   display: grid;
+//   justify-content: center;
+//   align-items: center;
+// `;
 
-export const StyledHeadshot = styled.img`
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin: 4em 0;
-`
+// export const StyledHeadshot = styled.img`
+//   border-radius: 50%;
+//   width: 200px;
+//   height: 200px;
+//   margin: 4em 0;
+// `
 
 export const StyledLandingLink = styled(StyledLink)`
   grid-row: 3;
