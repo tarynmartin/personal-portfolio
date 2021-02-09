@@ -1,31 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 //import headshot from '../../assets/taryn-headshot.jpg';
-import {StyledMain, Button, StyledLinks, AboutLogo, AboutLink, ProjectsLink, ProjectLogo, ContactLink, ContactLogo, LinkedinLink, LinkedinLogo, GithubLink, GithubLogo } from '../App/Styles.js';
+import About from '../About/About.js';
+import {StyledMain, Button, StyledLinks, StyledMainContent, AboutButton, AboutLogo, ProjectsButton, ProjectLogo, ContactButton, ContactLogo, LinkedinLink, LinkedinLogo, GithubLink, GithubLogo } from '../App/Styles.js';
 
 function Main() {
+  const [button, setButton] = useState('');
+
   return (
     <StyledMain>
-      <ProjectsLink to="/projects">
-        <Button>
+        <ProjectsButton onClick={() => setButton('project')}>
           <span>
             <ProjectLogo className="icon" />
           </span>
-        </Button>
-      </ProjectsLink>
-      <ContactLink to="/contact">
-        <Button>
+        </ProjectsButton>
+        <ContactButton onClick={() => setButton('contact')}>
           <span>
             <ContactLogo className="icon" />
           </span>
-        </Button>
-      </ContactLink>
-      <AboutLink to="/about">
-        <Button>
+        </ContactButton>
+        <AboutButton onClick={() => setButton('about')}>
           <span>
             <AboutLogo className="icon" />
           </span>
-        </Button>
-      </AboutLink>
+        </AboutButton>
       <StyledLinks>
         <LinkedinLink
           to={"https://www.linkedin.com/in/tarynmartin919/"}
@@ -56,6 +53,14 @@ function Main() {
           </Button>
         </GithubLink>
       </StyledLinks>
+      <StyledMainContent>
+        {button === '' &&
+          'Please click on a button for more information'
+        }
+        {button === 'about' &&
+          <About />
+        }
+      </StyledMainContent>    
     </StyledMain>
   );
 }
