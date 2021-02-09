@@ -25,7 +25,7 @@ export const StyledMain = styled.div`
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: repeat(4, 1fr);
 `;
 
@@ -97,7 +97,7 @@ export const StyledOutsideLink = styled(Link)`
     font-family: "Rakkas", cursive;
     font-size: 1em;
     width: 15vw;
-    height: 5vh;
+    height: 10vh;
     padding: 0.5em;
     border-radius: 10px;
     text-align: center;
@@ -161,7 +161,7 @@ export const LinkedinLink = styled(StyledOutsideLink)`
   grid-column: 1;
 
   &:hover button span:after {
-    content: "LinkedIn Profile";
+    content: "See Profile";
   }
 `;
 
@@ -174,7 +174,7 @@ export const GithubLink = styled(StyledOutsideLink)`
   grid-column: 2;
 
   &:hover button span:after {
-    content: "Github Profile";
+    content: "See Profile";
   }
 `;
 
