@@ -8,21 +8,21 @@ function Main() {
 
   return (
     <StyledMain>
-        <ProjectsButton onClick={() => setButton('project')}>
-          <span>
-            <ProjectLogo className="icon" />
-          </span>
-        </ProjectsButton>
-        <ContactButton onClick={() => setButton('contact')}>
-          <span>
-            <ContactLogo className="icon" />
-          </span>
-        </ContactButton>
-        <AboutButton onClick={() => setButton('about')}>
-          <span>
-            <AboutLogo className="icon" />
-          </span>
-        </AboutButton>
+      <AboutButton onClick={() => setButton('about')}>
+        <span>
+          <AboutLogo className="icon" />
+        </span>
+      </AboutButton>
+      <ProjectsButton onClick={() => setButton('project')}>
+        <span>
+          <ProjectLogo className="icon" />
+        </span>
+      </ProjectsButton>
+      <ContactButton onClick={() => setButton('contact')}>
+        <span>
+          <ContactLogo className="icon" />
+        </span>
+      </ContactButton>
       <StyledLinks>
         <LinkedinLink
           to={"https://www.linkedin.com/in/tarynmartin919/"}
@@ -60,7 +60,7 @@ function Main() {
         {button === 'about' &&
           <About />
         }
-      </StyledMainContent>    
+      </StyledMainContent>
     </StyledMain>
   );
 }
