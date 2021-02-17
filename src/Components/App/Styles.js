@@ -3,10 +3,8 @@ import img from '../../assets/tim-mossholder-G-IId4_X6mA-unsplash.jpg';
 import { Link } from 'react-router-dom';
 import { Github } from "@styled-icons/fa-brands/Github";
 import { Linkedin } from "@styled-icons/fa-brands/Linkedin";
-import { AboutDotMe } from "@styled-icons/simple-icons/AboutDotMe"; 
+import { AboutDotMe } from "@styled-icons/simple-icons/AboutDotMe";
 import { LaptopCode } from "@styled-icons/fa-solid/LaptopCode";
-//import { GraduationCap } from "@styled-icons/fa-solid/GraduationCap";
-//import { Briefcase } from "@styled-icons/fa-solid/Briefcase";
 import { MessageRounded } from "@styled-icons/boxicons-solid/MessageRounded";
 
 export const StyledApp = styled.div`
@@ -101,7 +99,8 @@ export const StyledLinks = styled.div`
 export const StyledMainContent = styled.section`
   grid-row: 1 / span 4;
   grid-column: 2;
-  display: flex;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
   justify-content: center;
 `
 
