@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 //import headshot from '../../assets/taryn-headshot.jpg';
 import About from '../About/About.js';
+import Projects from '../Projects/Projects.js';
+import Contact from '../Contact/Contact.js';
 import {StyledMain, Button, StyledLinks, StyledMainContent, AboutButton, AboutLogo, ProjectsButton, ProjectLogo, ContactButton, ContactLogo, LinkedinLink, LinkedinLogo, GithubLink, GithubLogo } from '../App/Styles.js';
 
 function Main() {
@@ -59,6 +61,12 @@ function Main() {
         }
         {button === 'about' &&
           <About />
+        }
+        {button === 'projects' &&
+          <Projects />
+        }
+        {button === 'contact' &&
+          <Contact />
         }
       </StyledMainContent>
     </StyledMain>
