@@ -62,7 +62,7 @@ function Main() {
         {button === 'about' &&
           <About />
         }
-        {button === 'projects' &&
+        {button === 'project' &&
           <Projects />
         }
         {button === 'contact' &&
